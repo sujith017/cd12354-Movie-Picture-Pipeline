@@ -4,12 +4,12 @@ ENV FLASK_RUN_HOST=0.0.0.0
 
 WORKDIR /
 
-RUN adduser --uid 1000 --disabled-password app
+RUN adduser --uid 1000 --disabled-password --gecos "" app
 
 RUN apt-get update && \
     apt-get install -y \
     build-essential \
-    libpcre3-dev \
+    libpcre2-dev \
     libssl-dev \
     libffi-dev \
     && rm -rf /var/lib/apt/lists/* \
